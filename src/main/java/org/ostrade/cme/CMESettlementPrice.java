@@ -1,13 +1,16 @@
 package org.ostrade.cme;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class CMESettlementPrice {
 
     @JsonProperty("BizDt")
-    private String bizDt;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    private LocalDate bizDt;
     @JsonProperty("Sym")
     private String sym;
     @JsonProperty("ID")
@@ -65,11 +68,11 @@ public class CMESettlementPrice {
     @JsonProperty("BankBusDay")
     private String bankBusDay;
 
-    public String getBizDt() {
+    public LocalDate getBizDt() {
         return bizDt;
     }
 
-    public void setBizDt(String bizDt) {
+    public void setBizDt(LocalDate bizDt) {
         this.bizDt = bizDt;
     }
 
