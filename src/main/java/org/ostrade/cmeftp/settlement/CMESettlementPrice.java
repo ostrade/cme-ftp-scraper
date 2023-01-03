@@ -1,4 +1,4 @@
-package org.ostrade.cme;
+package org.ostrade.cmeftp.settlement;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
